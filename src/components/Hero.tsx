@@ -1,138 +1,92 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 const Hero = () => {
-  const [score, setScore] = useState(0);
-  const [betaCount, setBetaCount] = useState(487);
-
-  useEffect(() => {
-    // Animate score counter on load
-    const timer = setTimeout(() => {
-      let current = 0;
-      const target = 785;
-      const increment = target / 50;
-      const scoreTimer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          setScore(target);
-          clearInterval(scoreTimer);
-        } else {
-          setScore(Math.floor(current));
-        }
-      }, 30);
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const scorePercentage = (score / 900) * 100;
-
   return (
-    <section className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
-      
-      <div className="container mx-auto px-4 pt-20 pb-16">
-        <div className="flex flex-col lg:flex-row items-center justify-between min-h-[80vh]">
-          {/* Left Content */}
-          <div className="flex-1 text-center lg:text-left mb-12 lg:mb-0">
-            <Badge className="mb-6 bg-amber-500/20 text-amber-300 border-amber-500/30 text-sm font-medium px-4 py-2">
-              Revolutionary Launch • Only {betaCount} Beta Spots Left
+    <section className="relative min-h-screen bg-gradient-to-br from-background via-[#FFF1D5] to-[#BDDDE4]/20 overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-[#9FB3DF]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#9EC6F3]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-[#BDDDE4]/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
+
+      <div className="relative z-10">
+        {/* Header */}
+        <header className="container mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#9FB3DF] to-[#9EC6F3] rounded-lg flex items-center justify-center shadow-lg group hover:shadow-xl transition-all duration-300">
+                <Sparkles className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <span className="text-2xl font-bold text-[#9FB3DF]">ThynkSphere<span className="text-[#9EC6F3]">AI</span></span>
+            </div>
+            <nav className="hidden md:flex items-center space-x-8">
+              <a href="#features" className="text-gray-600 hover:text-[#9FB3DF] transition-colors">Features</a>
+              <a href="#about" className="text-gray-600 hover:text-[#9FB3DF] transition-colors">About</a>
+              <Button variant="outline" className="border-[#9FB3DF] text-[#9FB3DF] hover:bg-[#9FB3DF] hover:text-white">
+                Contact
+              </Button>
+            </nav>
+          </div>
+        </header>
+
+        {/* Main Content */}
+        <div className="container mx-auto px-4 pt-20 pb-32">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="mb-6 bg-[#9FB3DF]/20 text-[#9FB3DF] border-[#9FB3DF]/30 text-sm font-medium px-4 py-2 animate-fade-in">
+              Revolutionary AI Technology • Coming Soon
             </Badge>
             
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Your Professional Value,{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">
+            <h1 className="text-5xl lg:text-7xl font-bold text-gray-800 mb-6 animate-fade-in">
+              Your Professional Value,
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3]">
                 Quantified
               </span>
             </h1>
             
-            <p className="text-xl lg:text-2xl text-slate-300 mb-8 max-w-2xl">
-              Join the recruitment revolution that brings CIBIL-like scoring to your career with our proprietary{' '}
-              <span className="text-amber-400 font-semibold">Employee Score™</span>
+            <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed animate-fade-in">
+              Introducing the <strong className="text-[#9FB3DF]">Employee Score™</strong> - the world's first CIBIL-like scoring system for professional talent. Bringing objectivity, transparency, and precision to recruitment.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 text-lg font-medium">
-                Get Your Score First
+            {/* Employee Score Visual */}
+            <div className="relative w-64 h-64 mx-auto mb-12 animate-scale-in">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#9FB3DF] to-[#9EC6F3] rounded-full opacity-20 animate-pulse"></div>
+              <div className="absolute inset-4 bg-white rounded-full shadow-2xl flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-[#9FB3DF] mb-2">850</div>
+                  <div className="text-sm text-gray-600">Employee Score™</div>
+                  <div className="text-xs text-gray-400 mt-1">Excellent</div>
+                </div>
+              </div>
+              <div className="absolute inset-0 border-4 border-[#9FB3DF]/30 rounded-full"></div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
+              <Button size="lg" className="bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3] hover:from-[#8EA3D3] hover:to-[#8BBAE7] text-white px-8 py-4 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300">
+                Join Our Waitlist
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button variant="outline" size="lg" className="border-slate-600 text-slate-300 hover:bg-slate-800 px-8 py-4 text-lg">
-                Access Pre-Scored Talent
+              <Button variant="outline" size="lg" className="border-[#9FB3DF] text-[#9FB3DF] hover:bg-[#9FB3DF] hover:text-white px-8 py-4 text-lg transition-all duration-300">
+                Stay Updated
               </Button>
             </div>
             
-            <div className="flex items-center justify-center lg:justify-start gap-4 text-sm text-slate-400">
+            <div className="flex items-center justify-center gap-8 text-sm text-gray-500 animate-fade-in">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span>Live Beta Access</span>
+                <div className="w-2 h-2 bg-[#9FB3DF] rounded-full animate-pulse"></div>
+                <span>AI-Powered Scoring</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
-                <span>Free Score Optimization</span>
+                <div className="w-2 h-2 bg-[#9EC6F3] rounded-full animate-pulse"></div>
+                <span>Transparent Algorithm</span>
               </div>
-            </div>
-          </div>
-          
-          {/* Right Content - Score Visualization */}
-          <div className="flex-1 flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Main Score Circle */}
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-                {/* Background Circle */}
-                <svg className="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="80"
-                    stroke="currentColor"
-                    strokeWidth="8"
-                    fill="none"
-                    className="text-slate-700"
-                  />
-                  {/* Progress Circle */}
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="80"
-                    stroke="url(#scoreGradient)"
-                    strokeWidth="8"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeDasharray={`${(scorePercentage * 502.4) / 100} 502.4`}
-                    className="transition-all duration-1000 ease-out"
-                  />
-                  <defs>
-                    <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#14b8a6" />
-                      <stop offset="100%" stopColor="#06b6d4" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                
-                {/* Score Display */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                  <div className="text-6xl lg:text-7xl font-bold font-mono">{score}</div>
-                  <div className="text-slate-400 text-lg mt-2">Employee Score™</div>
-                  <div className="text-sm text-slate-500 mt-1">out of 900</div>
-                </div>
-              </div>
-              
-              {/* Floating Score Factors */}
-              <div className="absolute -left-8 top-16 bg-slate-800/80 backdrop-blur-sm rounded-lg p-3 border border-slate-600">
-                <div className="text-xs text-slate-400">Resume Quality</div>
-                <div className="text-lg font-bold text-white">85/100</div>
-              </div>
-              
-              <div className="absolute -right-8 top-32 bg-slate-800/80 backdrop-blur-sm rounded-lg p-3 border border-slate-600">
-                <div className="text-xs text-slate-400">Skills Match</div>
-                <div className="text-lg font-bold text-white">92/100</div>
-              </div>
-              
-              <div className="absolute -left-4 bottom-20 bg-slate-800/80 backdrop-blur-sm rounded-lg p-3 border border-slate-600">
-                <div className="text-xs text-slate-400">Experience</div>
-                <div className="text-lg font-bold text-white">78/100</div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-[#BDDDE4] rounded-full animate-pulse"></div>
+                <span>Fair & Objective</span>
               </div>
             </div>
           </div>

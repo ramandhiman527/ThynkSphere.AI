@@ -1,200 +1,143 @@
 
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Star, Users, Zap, Gift } from 'lucide-react';
 
 const EarlyAdopterBenefits = () => {
   const jobSeekerBenefits = [
     {
+      icon: Star,
       title: 'Exclusive Beta Access',
-      description: 'Be among the first to receive your official Employee Score™',
-      icon: '🎯',
-      highlight: true
+      description: 'Be among the first to receive your official Employee Score™'
     },
     {
+      icon: Zap,
       title: 'Score Optimization Coaching',
-      description: 'Free AI-powered guidance to improve your score',
-      icon: '🚀',
-      highlight: false
+      description: 'Free AI-powered guidance to improve your professional score'
     },
     {
+      icon: Users,
       title: 'Priority Matching',
-      description: 'Early users get featured placement in employer searches',
-      icon: '⭐',
-      highlight: false
+      description: 'Early users get featured placement in employer searches'
     },
     {
+      icon: Gift,
       title: 'Founding Member Badge',
-      description: 'Lifetime profile distinction for early adopters',
-      icon: '🏆',
-      highlight: true
-    },
-    {
-      title: 'Score Improvement Tracking',
-      description: 'Visual dashboard showing progress over time',
-      icon: '📈',
-      highlight: false
+      description: 'Lifetime profile distinction for early adopters'
     }
   ];
 
   const recruiterBenefits = [
     {
+      icon: Gift,
       title: 'Free Trial Period',
-      description: '3 months of unlimited access to the full platform',
-      icon: '🎁',
-      highlight: true
+      description: '3 months of unlimited access to the full platform'
     },
     {
-      title: 'Candidate Pipeline Boost',
-      description: 'Access to our growing pool of pre-scored candidates',
-      icon: '👥',
-      highlight: false
+      icon: Users,
+      title: 'Pre-Scored Talent Pool',
+      description: 'Access to our growing pool of scored candidates'
     },
     {
+      icon: Zap,
       title: 'Custom Scoring Weights',
-      description: 'Tailor the Employee Score™ algorithm to your priorities',
-      icon: '⚙️',
-      highlight: true
+      description: 'Tailor the Employee Score™ algorithm to your needs'
     },
     {
+      icon: Star,
       title: 'Integration Support',
-      description: 'Free technical assistance connecting to your existing ATS',
-      icon: '🔗',
-      highlight: false
-    },
-    {
-      title: 'Hiring Analytics Dashboard',
-      description: 'Track quality of hire improvements with our metrics',
-      icon: '📊',
-      highlight: false
+      description: 'Free technical assistance connecting to your ATS'
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
+    <section className="py-20 bg-gradient-to-br from-white to-[#9FB3DF]/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-amber-500/20 text-amber-300 border-amber-500/30 text-sm font-medium px-4 py-2">
-            Limited Time • Early Adopter Program
+          <Badge className="mb-4 bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3] text-white border-0">
+            Limited Time • Early Access
           </Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Exclusive Benefits for
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
-              {' '}Pioneers
-            </span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+            Join the Future of
+            <span className="block text-[#9FB3DF]">Recruitment Today</span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Join the recruitment revolution early and unlock exclusive advantages that will 
-            give you a competitive edge in the evolving job market.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Be part of the revolutionary change in talent acquisition. 
+            Early adopters get exclusive benefits and shape the platform's evolution.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Job Seekers Benefits */}
-          <div>
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full flex items-center justify-center">
-                <span className="text-2xl">👤</span>
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Job Seekers */}
+          <Card className="border-[#9FB3DF]/20 hover:border-[#9FB3DF]/40 transition-all duration-300 hover:shadow-xl">
+            <CardContent className="p-8">
+              <div className="text-center mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#9FB3DF] to-[#9EC6F3] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">For Job Seekers</h3>
+                <p className="text-gray-600">Get your professional score and stand out</p>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white">For Job Seekers</h3>
-                <p className="text-slate-400">Stand out with objective credentials</p>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              {jobSeekerBenefits.map((benefit, index) => (
-                <Card 
-                  key={index} 
-                  className={`bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-colors ${
-                    benefit.highlight ? 'ring-2 ring-amber-500/50' : ''
-                  }`}
-                >
-                  <CardContent className="p-4">
-                    <div className="flex items-start gap-4">
-                      <div className="text-2xl">{benefit.icon}</div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <h4 className="font-semibold text-white">{benefit.title}</h4>
-                          {benefit.highlight && (
-                            <Badge className="bg-amber-500/20 text-amber-300 text-xs">
-                              Featured
-                            </Badge>
-                          )}
-                        </div>
-                        <p className="text-slate-400 text-sm">{benefit.description}</p>
-                      </div>
+              
+              <div className="space-y-6 mb-8">
+                {jobSeekerBenefits.map((benefit, index) => (
+                  <div key={benefit.title} className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-[#9FB3DF]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <benefit.icon className="w-5 h-5 text-[#9FB3DF]" />
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <Button className="w-full mt-6 bg-teal-600 hover:bg-teal-700 text-white py-3 text-lg font-medium">
-              Claim Your Early Access
-            </Button>
-          </div>
-
-          {/* Recruiters Benefits */}
-          <div>
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                <span className="text-2xl">🏢</span>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white">For Recruiters</h3>
-                <p className="text-slate-400">Access pre-scored talent pools</p>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              {recruiterBenefits.map((benefit, index) => (
-                <Card 
-                  key={index} 
-                  className={`bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-colors ${
-                    benefit.highlight ? 'ring-2 ring-amber-500/50' : ''
-                  }`}
-                >
-                  <CardContent className="p-4">
-                    <div className="flex items-start gap-4">
-                      <div className="text-2xl">{benefit.icon}</div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <h4 className="font-semibold text-white">{benefit.title}</h4>
-                          {benefit.highlight && (
-                            <Badge className="bg-amber-500/20 text-amber-300 text-xs">
-                              Premium
-                            </Badge>
-                          )}
-                        </div>
-                        <p className="text-slate-400 text-sm">{benefit.description}</p>
-                      </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800 mb-1">{benefit.title}</h4>
+                      <p className="text-gray-600 text-sm">{benefit.description}</p>
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  </div>
+                ))}
+              </div>
+              
+              <Button className="w-full bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3] hover:from-[#8EA3D3] hover:to-[#8BBAE7] text-white">
+                Get Your Score First
+              </Button>
+            </CardContent>
+          </Card>
 
-            <Button className="w-full mt-6 bg-purple-600 hover:bg-purple-700 text-white py-3 text-lg font-medium">
-              Start Free Trial
-            </Button>
-          </div>
+          {/* Recruiters */}
+          <Card className="border-[#9EC6F3]/20 hover:border-[#9EC6F3]/40 transition-all duration-300 hover:shadow-xl">
+            <CardContent className="p-8">
+              <div className="text-center mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#9EC6F3] to-[#BDDDE4] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">For Recruiters</h3>
+                <p className="text-gray-600">Access pre-scored talent efficiently</p>
+              </div>
+              
+              <div className="space-y-6 mb-8">
+                {recruiterBenefits.map((benefit, index) => (
+                  <div key={benefit.title} className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-[#9EC6F3]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <benefit.icon className="w-5 h-5 text-[#9EC6F3]" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800 mb-1">{benefit.title}</h4>
+                      <p className="text-gray-600 text-sm">{benefit.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <Button className="w-full bg-gradient-to-r from-[#9EC6F3] to-[#BDDDE4] hover:from-[#8BBAE7] hover:to-[#A8D1D8] text-white">
+                Access Pre-Scored Talent
+              </Button>
+            </CardContent>
+          </Card>
         </div>
 
-        {/* Scarcity Indicators */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-4 bg-slate-800/80 backdrop-blur-sm rounded-full px-6 py-3 border border-slate-600">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse" />
-              <span className="text-white font-medium">487 Beta Spots Remaining</span>
-            </div>
-            <Separator orientation="vertical" className="h-4 bg-slate-600" />
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-slate-400">2,143 Already Joined</span>
-            </div>
+        {/* Urgency Indicator */}
+        <div className="text-center mt-12">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#9FB3DF]/10 to-[#9EC6F3]/10 rounded-full px-6 py-3 border border-[#9FB3DF]/20">
+            <div className="w-2 h-2 bg-[#9FB3DF] rounded-full animate-pulse"></div>
+            <span className="text-[#9FB3DF] font-medium">Limited spots available • Join 500+ early adopters</span>
           </div>
         </div>
       </div>
