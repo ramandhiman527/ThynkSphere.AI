@@ -53,105 +53,103 @@ const EarlyAdopterBenefits = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-b from-[#BDDDE4] via-[#E8F2F5] to-[#FFF1D5] relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-[#FBFADA] to-[#FBFADA] relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-gradient-to-br from-[#9FB3DF]/10 to-[#9EC6F3]/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-gradient-to-br from-[#9EC6F3]/8 to-[#BDDDE4]/8 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-white/20 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-[#ADBC9F]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-48 h-48 bg-[#436850]/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#ADBC9F]/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20 animate-fade-in">
-          <Badge className="mb-8 bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3] text-white border-0 text-lg font-bold px-8 py-4 shadow-lg backdrop-blur-sm">
+        <div className="text-center mb-16 animate-fade-in">
+          <Badge className="mb-6 bg-gradient-to-r from-[#436850] to-[#ADBC9F] text-[#FBFADA] border-0 text-base font-bold px-6 py-3 shadow-soft backdrop-blur-sm">
             Limited Time • Early Access
           </Badge>
-          <h2 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight drop-shadow-lg">
+          <h2 className="text-4xl lg:text-5xl font-black text-[#12372A] mb-6 leading-tight">
             Join the Future of
-            <span className="block mt-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9FB3DF] via-[#9EC6F3] to-white animate-gradient bg-[length:200%_200%]">
+            <span className="block mt-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#436850] to-[#12372A] animate-gradient bg-[length:200%_200%]">
                 Recruitment Today
               </span>
             </span>
           </h2>
-          <p className="text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed font-medium drop-shadow-md">
+          <p className="text-lg lg:text-xl text-[#12372A]/80 max-w-3xl mx-auto leading-relaxed font-medium">
             Be part of the revolutionary change in talent acquisition. 
-            <strong className="text-white font-black"> Early adopters</strong> get exclusive benefits and shape the platform's evolution.
+            <strong className="text-[#436850] font-black"> Early adopters</strong> get exclusive benefits and shape the platform's evolution.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {/* Job Seekers */}
-          <Card className="group relative overflow-hidden border-0 bg-white/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-3 rounded-3xl animate-fade-in">
-            {/* Glow effect */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-br from-[#9FB3DF] to-[#9EC6F3] blur-xl"></div>
+          <Card className="group relative overflow-hidden border-0 bg-[#FBFADA]/95 backdrop-blur-sm shadow-soft hover:shadow-earth transition-all duration-500 hover:-translate-y-2 rounded-3xl animate-fade-in border border-[#ADBC9F]/20">
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br from-[#436850] to-[#ADBC9F] blur-xl"></div>
             
-            <CardContent className="p-10 relative z-10">
-              <div className="text-center mb-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-[#9FB3DF] to-[#9EC6F3] rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-10 h-10 text-white" />
+            <CardContent className="p-8 relative z-10">
+              <div className="text-center mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#436850] to-[#ADBC9F] rounded-3xl flex items-center justify-center mx-auto mb-4 shadow-earth group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-8 h-8 text-[#FBFADA]" />
                 </div>
-                <h3 className="text-3xl font-black text-slate-800 mb-3">For Job Seekers</h3>
-                <p className="text-slate-600 text-lg font-medium">Get your professional score and stand out</p>
+                <h3 className="text-2xl font-black text-[#12372A] mb-2">For Job Seekers</h3>
+                <p className="text-[#436850] text-base font-medium">Get your professional score and stand out</p>
               </div>
               
-              <div className="space-y-8 mb-10">
+              <div className="space-y-6 mb-8">
                 {jobSeekerBenefits.map((benefit, index) => (
                   <div 
                     key={benefit.title} 
-                    className="flex items-start gap-5 animate-fade-in"
-                    style={{ animationDelay: `${index * 100}ms` }}
+                    className="flex items-start gap-4 animate-fade-in"
+                    style={{ animationDelay: `${index * 80}ms` }}
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#9FB3DF]/10 to-[#9EC6F3]/10 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <benefit.icon className="w-6 h-6 text-[#9FB3DF]" />
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#436850]/10 to-[#ADBC9F]/10 rounded-xl flex items-center justify-center flex-shrink-0 shadow-soft">
+                      <benefit.icon className="w-5 h-5 text-[#436850]" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-800 mb-2 text-lg">{benefit.title}</h4>
-                      <p className="text-slate-600 font-medium">{benefit.description}</p>
+                      <h4 className="font-bold text-[#12372A] mb-1 text-base">{benefit.title}</h4>
+                      <p className="text-[#12372A]/80 font-medium text-sm">{benefit.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
               
-              <Button className="w-full bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3] hover:from-[#8EA3D3] hover:to-[#8BBAE7] text-white text-lg font-bold py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group">
+              <Button className="w-full bg-gradient-to-r from-[#436850] to-[#ADBC9F] hover:from-[#12372A] hover:to-[#436850] text-[#FBFADA] text-base font-bold py-5 rounded-2xl shadow-soft hover:shadow-earth transition-all duration-300 hover:scale-[1.02] group">
                 <span className="group-hover:animate-bounce">Get Your Score First</span>
               </Button>
             </CardContent>
           </Card>
 
           {/* Recruiters */}
-          <Card className="group relative overflow-hidden border-0 bg-white/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-3 rounded-3xl animate-fade-in">
-            {/* Glow effect */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-br from-[#9EC6F3] to-[#BDDDE4] blur-xl"></div>
+          <Card className="group relative overflow-hidden border-0 bg-[#FBFADA]/95 backdrop-blur-sm shadow-soft hover:shadow-earth transition-all duration-500 hover:-translate-y-2 rounded-3xl animate-fade-in border border-[#ADBC9F]/20">
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br from-[#ADBC9F] to-[#436850] blur-xl"></div>
             
-            <CardContent className="p-10 relative z-10">
-              <div className="text-center mb-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-[#9EC6F3] to-[#BDDDE4] rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-10 h-10 text-white" />
+            <CardContent className="p-8 relative z-10">
+              <div className="text-center mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#ADBC9F] to-[#436850] rounded-3xl flex items-center justify-center mx-auto mb-4 shadow-earth group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-8 h-8 text-[#FBFADA]" />
                 </div>
-                <h3 className="text-3xl font-black text-slate-800 mb-3">For Recruiters</h3>
-                <p className="text-slate-600 text-lg font-medium">Access pre-scored talent efficiently</p>
+                <h3 className="text-2xl font-black text-[#12372A] mb-2">For Recruiters</h3>
+                <p className="text-[#436850] text-base font-medium">Access pre-scored talent efficiently</p>
               </div>
               
-              <div className="space-y-8 mb-10">
+              <div className="space-y-6 mb-8">
                 {recruiterBenefits.map((benefit, index) => (
                   <div 
                     key={benefit.title} 
-                    className="flex items-start gap-5 animate-fade-in"
-                    style={{ animationDelay: `${index * 100}ms` }}
+                    className="flex items-start gap-4 animate-fade-in"
+                    style={{ animationDelay: `${index * 80}ms` }}
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#9EC6F3]/10 to-[#BDDDE4]/10 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <benefit.icon className="w-6 h-6 text-[#9EC6F3]" />
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#ADBC9F]/10 to-[#436850]/10 rounded-xl flex items-center justify-center flex-shrink-0 shadow-soft">
+                      <benefit.icon className="w-5 h-5 text-[#436850]" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-800 mb-2 text-lg">{benefit.title}</h4>
-                      <p className="text-slate-600 font-medium">{benefit.description}</p>
+                      <h4 className="font-bold text-[#12372A] mb-1 text-base">{benefit.title}</h4>
+                      <p className="text-[#12372A]/80 font-medium text-sm">{benefit.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
               
-              <Button className="w-full bg-gradient-to-r from-[#9EC6F3] to-[#BDDDE4] hover:from-[#8BBAE7] hover:to-[#A8D1D8] text-white text-lg font-bold py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group">
+              <Button className="w-full bg-gradient-to-r from-[#ADBC9F] to-[#436850] hover:from-[#436850] hover:to-[#12372A] text-[#FBFADA] text-base font-bold py-5 rounded-2xl shadow-soft hover:shadow-earth transition-all duration-300 hover:scale-[1.02] group">
                 <span className="group-hover:animate-bounce">Access Pre-Scored Talent</span>
               </Button>
             </CardContent>
@@ -159,11 +157,11 @@ const EarlyAdopterBenefits = () => {
         </div>
 
         {/* Urgency Indicator */}
-        <div className="text-center mt-16 animate-fade-in">
-          <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-md rounded-full px-8 py-4 border border-white/30 shadow-xl">
-            <div className="w-3 h-3 bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3] rounded-full animate-pulse shadow-lg"></div>
-            <span className="text-white font-bold text-lg drop-shadow-md">Limited spots available • Join 500+ early adopters</span>
-            <div className="w-3 h-3 bg-gradient-to-r from-[#9EC6F3] to-[#BDDDE4] rounded-full animate-pulse delay-500 shadow-lg"></div>
+        <div className="text-center mt-12 animate-fade-in">
+          <div className="inline-flex items-center gap-2 bg-[#ADBC9F]/20 backdrop-blur-md rounded-full px-6 py-3 border border-[#436850]/20 shadow-soft">
+            <div className="w-2 h-2 bg-[#436850] rounded-full animate-pulse shadow-sm"></div>
+            <span className="text-[#12372A] font-bold text-base">Limited spots available • Join 500+ early adopters</span>
+            <div className="w-2 h-2 bg-[#ADBC9F] rounded-full animate-pulse delay-500 shadow-sm"></div>
           </div>
         </div>
       </div>
