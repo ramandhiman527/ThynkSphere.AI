@@ -142,7 +142,7 @@ const EmployeeScoreShowcase = () => {
                     {feature.description}
                   </p>
                 </CardContent>
-              </div>
+              </Card>
             ))}
           </div>
         </div>
