@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import WaitlistForm from './WaitlistForm';
 
 const Hero = () => {
   return (
@@ -41,11 +42,11 @@ const Hero = () => {
         {/* Main Content */}
         <div className="container mx-auto px-4 pt-8 pb-16">
           <div className="max-w-5xl mx-auto text-center">
+            {/* Optimized Hero Text */}
             <Badge className="mb-6 bg-white/20 text-white-shadow border-white/30 text-sm font-bold-strong px-5 py-2 animate-fade-in backdrop-blur-sm">
               Revolutionary AI Technology • Coming Soon
             </Badge>
             
-            {/* Optimized Hero Text */}
             <h1 className="text-3xl lg:text-5xl font-bold-strong mb-6 leading-tight animate-fade-in">
               <span className="block text-white-shadow mb-2">Create the most</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-[#FED2E2] to-white animate-gradient bg-[length:200%_200%]">
@@ -75,17 +76,10 @@ const Hero = () => {
               <div className="absolute inset-0 border-4 border-transparent bg-gradient-to-r from-white to-[#FED2E2] rounded-full animate-spin opacity-40" style={{ animationDuration: '20s', mask: 'conic-gradient(transparent 270deg, white 360deg)', WebkitMask: 'conic-gradient(transparent 270deg, white 360deg)' }}></div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12 animate-fade-in">
-              <Button size="lg" className="bg-white/20 hover:bg-white/30 text-white-shadow px-10 py-5 text-lg font-bold-strong shadow-purple hover:shadow-soft transition-all duration-300 rounded-2xl transform hover:scale-105 backdrop-blur-sm border border-white/20">
-                Get Started For Free
-                <ArrowRight className="ml-3 w-5 h-5" />
-              </Button>
-              <div className="text-center sm:text-left">
-                <div className="text-sm text-light-lilac mt-3 font-medium-bold">No credit card required*</div>
-              </div>
-            </div>
+            {/* Waitlist Form - replacing the old button */}
+            <WaitlistForm />
             
-            <div className="flex items-center justify-center gap-8 text-sm text-light-lilac animate-fade-in">
+            <div className="flex items-center justify-center gap-8 text-sm text-light-lilac animate-fade-in mt-12">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-[#FED2E2] rounded-full animate-pulse"></div>
                 <span className="font-medium-bold">AI-Powered Scoring</span>
