@@ -36,56 +36,60 @@ const Hero = () => {
 
         {/* Main Content */}
         <div className="container mx-auto px-4 pt-20 pb-32">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-[#9FB3DF]/20 text-[#9FB3DF] border-[#9FB3DF]/30 text-sm font-medium px-4 py-2 animate-fade-in">
+          <div className="max-w-5xl mx-auto text-center">
+            <Badge className="mb-6 bg-gradient-to-r from-[#9FB3DF]/20 to-[#9EC6F3]/20 text-[#9FB3DF] border-[#9FB3DF]/30 text-sm font-medium px-4 py-2 animate-fade-in">
               Revolutionary AI Technology • Coming Soon
             </Badge>
             
-            <h1 className="text-5xl lg:text-7xl font-bold text-gray-800 mb-6 animate-fade-in">
-              Your Professional Value,
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3]">
-                Quantified
+            {/* Bold Hero Text with Gradient */}
+            <h1 className="text-6xl lg:text-8xl font-black text-gray-900 mb-8 leading-tight animate-fade-in">
+              Create the most
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#9FB3DF] via-[#9EC6F3] to-[#BDDDE4] animate-pulse">
+                intelligent hiring
+              </span>
+              <span className="block text-gray-900 italic font-light text-5xl lg:text-6xl">
+                for your company.
               </span>
             </h1>
             
-            <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed animate-fade-in">
-              Introducing the <strong className="text-[#9FB3DF]">Employee Score™</strong> - the world's first CIBIL-like scoring system for professional talent. Bringing objectivity, transparency, and precision to recruitment.
+            <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed animate-fade-in">
+              Powered by the most advanced <strong className="text-[#9FB3DF]">Employee Score™</strong> algorithm for talent evaluation.
             </p>
             
             {/* Employee Score Visual */}
-            <div className="relative w-64 h-64 mx-auto mb-12 animate-scale-in">
+            <div className="relative w-80 h-80 mx-auto mb-16 animate-scale-in">
               <div className="absolute inset-0 bg-gradient-to-br from-[#9FB3DF] to-[#9EC6F3] rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute inset-4 bg-white rounded-full shadow-2xl flex items-center justify-center">
+              <div className="absolute inset-8 bg-white rounded-full shadow-2xl flex items-center justify-center border-4 border-gradient-to-r from-[#9FB3DF] to-[#9EC6F3]">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[#9FB3DF] mb-2">850</div>
-                  <div className="text-sm text-gray-600">Employee Score™</div>
-                  <div className="text-xs text-gray-400 mt-1">Excellent</div>
+                  <div className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3] mb-4">850</div>
+                  <div className="text-lg font-semibold text-gray-700">Employee Score™</div>
+                  <div className="text-sm text-[#9EC6F3] font-medium mt-2">Excellent</div>
                 </div>
               </div>
-              <div className="absolute inset-0 border-4 border-[#9FB3DF]/30 rounded-full"></div>
+              <div className="absolute inset-0 border-4 border-[#9FB3DF]/30 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
-              <Button size="lg" className="bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3] hover:from-[#8EA3D3] hover:to-[#8BBAE7] text-white px-8 py-4 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300">
-                Join Our Waitlist
-                <ArrowRight className="ml-2 w-5 h-5" />
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in">
+              <Button size="lg" className="bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3] hover:from-[#8EA3D3] hover:to-[#8BBAE7] text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-2xl">
+                Get Started For Free
+                <ArrowRight className="ml-3 w-6 h-6" />
               </Button>
-              <Button variant="outline" size="lg" className="border-[#9FB3DF] text-[#9FB3DF] hover:bg-[#9FB3DF] hover:text-white px-8 py-4 text-lg transition-all duration-300">
-                Stay Updated
-              </Button>
+              <div className="text-center sm:text-left">
+                <div className="text-sm text-gray-500 mt-2">No credit card required*</div>
+              </div>
             </div>
             
-            <div className="flex items-center justify-center gap-8 text-sm text-gray-500 animate-fade-in">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-[#9FB3DF] rounded-full animate-pulse"></div>
+            <div className="flex items-center justify-center gap-12 text-sm text-gray-500 animate-fade-in">
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3] rounded-full animate-pulse"></div>
                 <span>AI-Powered Scoring</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-[#9EC6F3] rounded-full animate-pulse"></div>
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-gradient-to-r from-[#9EC6F3] to-[#BDDDE4] rounded-full animate-pulse"></div>
                 <span>Transparent Algorithm</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-[#BDDDE4] rounded-full animate-pulse"></div>
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-gradient-to-r from-[#BDDDE4] to-[#9FB3DF] rounded-full animate-pulse"></div>
                 <span>Fair & Objective</span>
               </div>
             </div>
