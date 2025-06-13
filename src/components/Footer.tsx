@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles } from 'lucide-react';
@@ -21,7 +20,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-gradient-to-br from-white/30 to-[#FED2E2]/30 rounded-lg flex items-center justify-center backdrop-blur-sm">
                 <Sparkles className="w-5 h-5 text-white-shadow" />
               </div>
-              <span className="text-xl font-bold-strong text-white-shadow">ThynkSphere<span className="text-[#FED2E2]">AI</span></span>
+              <span className="text-xl font-bold-strong text-white-shadow">UltraSphere<span className="text-[#FED2E2]">AI</span></span>
             </div>
             
             {/* Main heading */}
@@ -55,7 +54,7 @@ const Footer = () => {
               <div className="w-6 h-6 bg-gradient-to-br from-white/30 to-[#FED2E2]/30 rounded-lg flex items-center justify-center backdrop-blur-sm">
                 <Sparkles className="w-4 h-4 text-white-shadow" />
               </div>
-              <span className="text-base font-bold-strong text-white-shadow">ThynkSphere<span className="text-[#FED2E2]">AI</span></span>
+              <span className="text-base font-bold-strong text-white-shadow">UltraSphere<span className="text-[#FED2E2]">AI</span></span>
             </div>
             
             {/* Navigation Links */}
@@ -70,7 +69,7 @@ const Footer = () => {
           {/* Bottom text row */}
           <div className="flex flex-col md:flex-row justify-between items-center text-light-lilac text-xs border-t border-white/20 pt-4">
             <div>
-              © 2024 ThynkSphere AI. All rights reserved.
+              © 2024 UltraSphere AI. All rights reserved.
             </div>
             <div className="flex space-x-4 mt-3 md:mt-0">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

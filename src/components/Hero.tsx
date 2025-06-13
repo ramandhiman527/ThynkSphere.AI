@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -26,7 +25,7 @@ const Hero = () => {
                 <Sparkles className="w-5 h-5 text-white-shadow group-hover:scale-110 transition-transform duration-300" />
               </div>
               <span className="text-xl font-bold-strong text-white-shadow">
-                ThynkSphere<span className="text-[#FED2E2]">AI</span>
+                UltraSphere<span className="text-[#FED2E2]">AI</span>
               </span>
             </div>
             <nav className="hidden md:flex items-center space-x-6">

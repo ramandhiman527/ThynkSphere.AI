@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -62,12 +61,12 @@ const EmployeeScoreShowcase = () => {
             Core Innovation • AI Technology
           </Badge>
           
-          <h2 className="text-3xl lg:text-5xl font-black text-white mb-6 leading-tight text-white-shadow">
+          <h2 className="text-3xl lg:text-5xl font-black text-[#1A1A1A] mb-6 leading-tight">
             How the
             <span className="relative inline-block ml-4">
-              <span className="text-white animate-gradient text-white-shadow">Employee</span>
+              <span className="text-[#1A1A1A] animate-gradient">Employee</span>
             </span>
-            <span className="block text-white font-light text-2xl lg:text-3xl italic mt-2 text-white-shadow">
+            <span className="block text-[#1A1A1A] font-light text-2xl lg:text-3xl italic mt-2">
               Score™ Works
             </span>
           </h2>
@@ -134,7 +133,7 @@ const EmployeeScoreShowcase = () => {
                     <div className={`w-10 h-10 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center shadow-${feature.glow} group-hover:scale-110 transition-all duration-300`}>
                       <feature.icon className="w-5 h-5 text-white" />
                     </div>
-                    <h3 className="text-lg font-black text-white group-hover:text-white transition-all duration-300 text-white-shadow">
+                    <h3 className="text-lg font-black text-[#1A1A1A] group-hover:text-[#1A1A1A] transition-all duration-300">
                       {feature.title}
                     </h3>
                   </div>
