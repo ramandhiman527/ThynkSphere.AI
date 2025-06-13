@@ -161,4 +161,32 @@
   .bg-gradient-section {
     background: linear-gradient(to bottom, var(--tw-gradient-stops));
   }
+
+  /* Typography utilities with enhanced contrast and shadows */
+  .text-white-shadow {
+    color: #FFFFFF;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-light-lilac {
+    color: #F9F7FF;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-dark-charcoal {
+    color: #2E2E2E;
+  }
+
+  .text-deep-plum {
+    color: #4B0071;
+  }
+
+  /* Font weight utilities */
+  .font-medium-bold {
+    font-weight: 600;
+  }
+
+  .font-bold-strong {
+    font-weight: 700;
+  }
 }
