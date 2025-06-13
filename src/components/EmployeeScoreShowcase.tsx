@@ -58,22 +58,22 @@ const EmployeeScoreShowcase = () => {
             </div>
           </div>
           
-          <Badge className="mb-6 bg-[#8F87F1]/20 text-[#8F87F1] border-[#8F87F1]/30 text-base font-bold px-6 py-3 animate-fade-in backdrop-blur-sm">
+          <Badge className="mb-6 bg-white/20 text-[#1A1A1A] border-white/30 text-base font-bold px-6 py-3 animate-fade-in backdrop-blur-sm">
             Core Innovation • AI Technology
           </Badge>
           
-          <h2 className="text-3xl lg:text-5xl font-black text-[#8F87F1] mb-6 leading-tight">
+          <h2 className="text-3xl lg:text-5xl font-black text-white mb-6 leading-tight text-white-shadow">
             How the
             <span className="relative inline-block ml-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8F87F1] to-[#C68EFD] animate-gradient bg-[length:200%_200%]">Employee</span>
+              <span className="text-white animate-gradient text-white-shadow">Employee</span>
             </span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#C68EFD] to-[#E9A5F1] font-light text-2xl lg:text-3xl italic mt-2">
+            <span className="block text-white font-light text-2xl lg:text-3xl italic mt-2 text-white-shadow">
               Score™ Works
             </span>
           </h2>
           
-          <p className="text-lg text-[#8F87F1]/80 max-w-4xl mx-auto leading-relaxed animate-fade-in font-medium">
-            Our proprietary algorithm analyzes multiple factors to create an <strong className="font-black text-[#8F87F1]">objective, comprehensive score</strong> that represents your professional value.
+          <p className="text-lg text-[#1A1A1A] max-w-4xl mx-auto leading-relaxed animate-fade-in font-medium">
+            Our proprietary algorithm analyzes multiple factors to create an <strong className="font-black text-[#1A1A1A]">objective, comprehensive score</strong> that represents your professional value.
           </p>
         </div>
 
@@ -83,11 +83,11 @@ const EmployeeScoreShowcase = () => {
             <div className="relative w-full max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-[#8F87F1]/20 to-[#C68EFD]/20 rounded-3xl blur-2xl animate-pulse"></div>
               
-              <div className="relative bg-gradient-to-br from-white/95 to-[#FED2E2]/95 rounded-3xl shadow-purple p-8 border border-[#8F87F1]/20 backdrop-blur-sm">
+              <div className="relative bg-gradient-to-br from-white/95 to-white/90 rounded-3xl shadow-purple p-8 border border-[#8F87F1]/20 backdrop-blur-sm">
                 <div className="text-center mb-8">
                   <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#8F87F1] to-[#C68EFD] mb-3 animate-pulse">750</div>
-                  <div className="text-xl font-bold text-[#8F87F1] mb-1">Employee Score™</div>
-                  <div className="text-lg text-[#C68EFD] font-bold">Good</div>
+                  <div className="text-xl font-bold text-[#1A1A1A] mb-1">Employee Score™</div>
+                  <div className="text-lg text-[#8F87F1] font-bold">Good</div>
                 </div>
                 
                 <div className="space-y-4">
@@ -99,12 +99,12 @@ const EmployeeScoreShowcase = () => {
                             <factor.icon className="w-4 h-4 text-white" />
                           </div>
                           <div>
-                            <div className="font-bold text-[#8F87F1] text-sm">{factor.name}</div>
-                            <div className="text-xs text-[#C68EFD]">{factor.weight}% weight</div>
+                            <div className="font-bold text-[#1A1A1A] text-sm">{factor.name}</div>
+                            <div className="text-xs text-[#8F87F1]">{factor.weight}% weight</div>
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className="font-black text-[#8F87F1] text-lg">{factor.score}</div>
+                          <div className="font-black text-[#1A1A1A] text-lg">{factor.score}</div>
                         </div>
                       </div>
                       <div className="w-full h-2 bg-[#E9A5F1]/30 rounded-full overflow-hidden">
@@ -125,7 +125,7 @@ const EmployeeScoreShowcase = () => {
             {features.map((feature, index) => (
               <Card 
                 key={index} 
-                className="relative overflow-hidden border-0 shadow-soft hover:shadow-purple transition-all duration-500 hover:-translate-y-1 bg-gradient-to-br from-white/90 to-[#FED2E2]/30 rounded-2xl group backdrop-blur-sm border border-[#8F87F1]/10"
+                className="relative overflow-hidden border-0 shadow-soft hover:shadow-purple transition-all duration-500 hover:-translate-y-1 bg-gradient-to-br from-white/90 to-white/80 rounded-2xl group backdrop-blur-sm border border-white/30"
               >
                 <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br ${feature.gradient} blur-xl`}></div>
                 
@@ -134,22 +134,22 @@ const EmployeeScoreShowcase = () => {
                     <div className={`w-10 h-10 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center shadow-${feature.glow} group-hover:scale-110 transition-all duration-300`}>
                       <feature.icon className="w-5 h-5 text-white" />
                     </div>
-                    <h3 className="text-lg font-black text-[#8F87F1] group-hover:text-[#C68EFD] transition-all duration-300">
+                    <h3 className="text-lg font-black text-white group-hover:text-white transition-all duration-300 text-white-shadow">
                       {feature.title}
                     </h3>
                   </div>
-                  <p className="text-[#8F87F1]/80 text-sm leading-relaxed font-medium">
+                  <p className="text-[#1A1A1A] text-sm leading-relaxed font-medium">
                     {feature.description}
                   </p>
                 </CardContent>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Bottom accent */}
         <div className="flex items-center justify-center">
-          <div className="flex items-center gap-6 text-sm text-[#8F87F1]/70 animate-fade-in">
+          <div className="flex items-center gap-6 text-sm text-[#1A1A1A] animate-fade-in">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-[#8F87F1] rounded-full animate-pulse"></div>
               <span className="font-semibold">Transparent Algorithm</span>
