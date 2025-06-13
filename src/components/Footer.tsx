@@ -1,46 +1,75 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { Mail, Twitter, Linkedin, Sparkles } from 'lucide-react';
+import { Mail, Twitter, Linkedin, Sparkles, TrendingUp } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-gray-50 to-[#FFF1D5]/30 pt-16 pb-8">
       <div className="container mx-auto px-4">
-        {/* CTA Section */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
-            Ready to Transform
-            <span className="text-[#9FB3DF]"> Your Future?</span>
-          </h2>
+        {/* CTA Section - Redesigned */}
+        <div className="relative mb-16 max-w-4xl mx-auto">
+          {/* Radial gradient backdrop */}
+          <div className="absolute inset-0 bg-gradient-radial from-white/60 via-[#FFF1D5]/40 to-transparent rounded-3xl blur-xl"></div>
           
-          <p className="text-lg text-gray-600 mb-8">
-            Join the recruitment revolution. Be among the first to experience 
-            the power of objective professional scoring.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3] hover:from-[#8EA3D3] hover:to-[#8BBAE7] text-white px-8 py-4 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300">
-              Join Our Waitlist
-            </Button>
-            <Button variant="outline" size="lg" className="border-[#9FB3DF] text-[#9FB3DF] hover:bg-[#9FB3DF] hover:text-white px-8 py-4 text-lg transition-all duration-300">
-              Stay Updated
-            </Button>
-          </div>
-          
-          <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#9FB3DF] rounded-full animate-pulse" />
-              <span>Early Access Benefits</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#9EC6F3] rounded-full animate-pulse" />
-              <span>No Cost to Join</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#BDDDE4] rounded-full animate-pulse" />
-              <span>Shape the Future</span>
+          {/* Content container */}
+          <div className="relative bg-white/40 backdrop-blur-sm rounded-3xl p-12 border border-white/50 shadow-xl">
+            <div className="text-center">
+              {/* Icon and heading */}
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#9FB3DF] to-[#9EC6F3] rounded-2xl flex items-center justify-center shadow-lg">
+                  <TrendingUp className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-[#9FB3DF] to-gray-700">
+                  Ready to Transform
+                  <span className="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3]">
+                    Your Future?
+                  </span>
+                </h2>
+              </div>
+              
+              <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+                Join the recruitment revolution. Be among the first to experience 
+                the power of objective professional scoring.
+              </p>
+              
+              {/* Animated pill-shaped buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Button 
+                  size="lg" 
+                  className="group relative overflow-hidden bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3] hover:from-[#8EA3D3] hover:to-[#8BBAE7] text-white px-10 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0"
+                >
+                  {/* Glow effect on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#9FB3DF]/20 to-[#9EC6F3]/20 rounded-full opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
+                  <span className="relative z-10 group-hover:animate-pulse">Join Our Waitlist</span>
+                </Button>
+                
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="group relative overflow-hidden border-2 border-[#9FB3DF]/30 bg-white/50 backdrop-blur-sm text-[#9FB3DF] hover:bg-[#9FB3DF] hover:text-white px-10 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105"
+                >
+                  {/* Subtle glow on hover */}
+                  <div className="absolute inset-0 bg-[#9FB3DF]/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <span className="relative z-10">Stay Updated</span>
+                </Button>
+              </div>
+              
+              {/* Status indicators with refined styling */}
+              <div className="flex items-center justify-center gap-8 text-sm text-gray-500">
+                <div className="flex items-center gap-2 bg-white/60 rounded-full px-4 py-2 backdrop-blur-sm">
+                  <div className="w-2 h-2 bg-gradient-to-r from-[#9FB3DF] to-[#9EC6F3] rounded-full animate-pulse shadow-sm" />
+                  <span className="font-medium">Early Access Benefits</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/60 rounded-full px-4 py-2 backdrop-blur-sm">
+                  <div className="w-2 h-2 bg-gradient-to-r from-[#9EC6F3] to-[#BDDDE4] rounded-full animate-pulse delay-500 shadow-sm" />
+                  <span className="font-medium">No Cost to Join</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/60 rounded-full px-4 py-2 backdrop-blur-sm">
+                  <div className="w-2 h-2 bg-gradient-to-r from-[#BDDDE4] to-[#FFF1D5] rounded-full animate-pulse delay-1000 shadow-sm" />
+                  <span className="font-medium">Shape the Future</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

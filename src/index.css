@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -169,5 +170,10 @@
   .bg-high-contrast {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(8px);
+  }
+
+  /* Radial gradient utility */
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
   }
 }
